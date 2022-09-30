@@ -21,29 +21,49 @@
 
 /** Root **/
 :root {
-  --clr-primary-50: hsl(199, 94%, 94%);
-  --clr-primary-100: hsl(199, 92%, 85%);
-  --clr-primary-200: hsl(199, 92%, 74%);
-  --clr-primary-300: hsl(199, 91%, 64%);
-  --clr-primary-400: hsl(199, 92%, 56%);
-  --clr-primary-500: hsl(199, 98%, 48%);
-  --clr-primary-600: hsl(200, 97%, 45%);
-  --clr-primary-700: hsl(201, 98%, 41%);
-  --clr-primary-800: hsl(202, 98%, 37%);
-  --clr-primary-900: hsl(206, 99%, 31%);
+  --clr-primary-50: hsl(204, 15%, 94%);
+  --clr-primary-100: hsl(198, 16%, 84%);
+  --clr-primary-200: hsl(200, 15%, 73%);
+  --clr-primary-300: hsl(200, 16%, 62%);
+  --clr-primary-400: hsl(200, 15%, 54%);
+  --clr-primary-500: hsl(200, 18%, 46%);
+  --clr-primary-600: hsl(199, 18%, 40%);
+  --clr-primary-700: hsl(199, 18%, 33%);
+  --clr-primary-800: hsl(200, 18%, 26%);
+  --clr-primary-900: hsl(200, 19%, 18%);
 
-  --clr-secondary-50: hsl(187, 72%, 93%);
-  --clr-secondary-100: hsl(187, 71%, 82%);
-  --clr-secondary-200: hsl(187, 72%, 71%);
-  --clr-secondary-300: hsl(187, 71%, 59%);
-  --clr-secondary-400: hsl(187, 71%, 50%);
-  --clr-secondary-500: hsl(187, 100%, 42%);
-  --clr-secondary-600: hsl(187, 100%, 38%);
-  --clr-secondary-700: hsl(186, 100%, 33%);
-  --clr-secondary-800: hsl(185, 100%, 28%);
-  --clr-secondary-900: hsl(182, 100%, 20%);
+  --clr-secondary-50: hsl(37, 100%, 94%);
+  --clr-secondary-100: hsl(36, 100%, 85%);
+  --clr-secondary-200: hsl(36, 100%, 75%);
+  --clr-secondary-300: hsl(36, 100%, 65%);
+  --clr-secondary-400: hsl(36, 100%, 57%);
+  --clr-secondary-500: hsl(36, 100%, 50%);
+  --clr-secondary-600: hsl(33, 100%, 49%);
+  --clr-secondary-700: hsl(30, 100%, 48%);
+  --clr-secondary-800: hsl(27, 100%, 47%);
+  --clr-secondary-900: hsl(21, 100%, 45%);
 
-  --clr-accent-400: hsl(4, 90%, 58%);
+  --clr-danger-50: hsl(351, 100%, 96%);
+  --clr-danger-100: hsl(354, 100%, 90%);
+  --clr-danger-200: hsl(0, 73%, 77%);
+  --clr-danger-300: hsl(0, 69%, 67%);
+  --clr-danger-400: hsl(1, 83%, 63%);
+  --clr-danger-500: hsl(4, 90%, 58%);
+  --clr-danger-600: hsl(1, 77%, 55%);
+  --clr-danger-700: hsl(0, 65%, 51%);
+  --clr-danger-800: hsl(0, 66%, 47%);
+  --clr-danger-900: hsl(0, 73%, 41%);
+
+  --clr-success-50: hsl(125, 39%, 94%);
+  --clr-success-100: hsl(122, 38%, 84%);
+  --clr-success-200: hsl(122, 37%, 74%);
+  --clr-success-300: hsl(123, 38%, 64%);
+  --clr-success-400: hsl(123, 38%, 57%);
+  --clr-success-500: hsl(122, 39%, 49%);
+  --clr-success-600: hsl(123, 41%, 45%);
+  --clr-success-700: hsl(123, 43%, 39%);
+  --clr-success-800: hsl(123, 46%, 34%);
+  --clr-success-900: hsl(124, 55%, 24%);
 
   --clr-grey-50: hsl(0, 0%, 100%);
   --clr-grey-100: hsl(0, 0%, 90%);
@@ -79,6 +99,7 @@
   --fs-900: 3.5rem;
 
   --size-0: 0;
+  --size-50: 0.1rem;
   --size-100: 0.25rem;
   --size-200: 0.5rem;
   --size-300: 0.75rem;
@@ -100,6 +121,10 @@
 
 /** Content **/
 /** Content - General Styling **/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-size: var(--fs-base);
@@ -196,7 +221,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-bg-clr: var(--clr-grey-800);
   --btn-hover-border-clr: var(--clr-grey-800);
 
-  --btn-padding: var(--size-200) var(--size-400);
+  --btn-padding: var(--size-100) var(--size-400);
 
   display: inline-flex;
   align-items: center;
@@ -219,76 +244,144 @@ a:where(:hover, :focus, :focus-visible) {
   width: 100%;
 }
 
-.btn-secondary {
+.btn-primary {
   --btn-clr: var(--clr-grey-50);
-  --btn-bg-clr: var(--clr-secondary-900);
-  --btn-border-clr: var(--clr-secondary-900);
+  --btn-bg-clr: var(--clr-primary-500);
+  --btn-border-clr: var(--clr-primary-500);
 
   --btn-hover-clr: var(--clr-grey-50);
-  --btn-hover-bg-clr: var(--clr-secondary-800);
-  --btn-hover-border-clr: var(--clr-secondary-800);
+  --btn-hover-bg-clr: var(--clr-primary-400);
+  --btn-hover-border-clr: var(--clr-primary-400);
+}
+
+hr {
+  border: thin solid var(--clr-primary-100);
 }
 
 /** Content - General Styling - End **/
 
 /** Content - Layout **/
-.modal {
-  max-width: 50ch;
-  margin: auto;
-  background-color: var(--clr-primary-50);
-  border: 2px solid var(--clr-secondary-900);
-  padding: var(--size-400);
-}
-
-.modal::backdrop {
-  background-color: hsl(182, 100%, 20%);
-  opacity: 0.2;
-}
-
-.modal-footer {
+.nav-list {
   display: flex;
-  justify-content: end;
   gap: var(--size-200);
 }
 
-.dialog-form {
+.nav-list > .nav-list-item:not(:last-child) {
+  padding-right: var(--size-200);
+  border-right: thin solid var(--clr-primary-800);
+}
+
+.form {
+  --clr-invalid: var(--clr-danger-800);
+  --clr-invalid-bg: var(--clr-danger-50);
+  --clr-invalid-border: var(--clr-danger-800);
+
+  --clr-valid: var(--clr-success-800);
+  --clr-valid-bg: var(--clr-success-50);
+  --clr-valid-border: var(--clr-success-800);
+
   display: flex;
   flex-direction: column;
-  gap: var(--size-400);
+  gap: var(--size-200);
 }
 
 .form-group {
   display: flex;
-  flex-direction: column;
-  gap: var(--size-100);
+  align-items: center;
+  gap: var(--size-200);
 }
 
 .form-label {
   display: flex;
+  justify-content: start;
   align-items: center;
+  min-width: 5ch;
+}
+
+.form-group:has(:not(:placeholder-shown):invalid) .form-label {
+  color: var(--clr-invalid);
+}
+
+.form-group:has(:not(:placeholder-shown):valid) .form-label {
+  color: var(--clr-valid);
 }
 
 .form-input {
   display: block;
-  min-height: 2em;
+  min-height: 1em;
   border: none;
   border-radius: 0;
-  padding: var(--size-100);
-  color: var(--clr-secondary-900);
-  background-color: var(--clr-secondary-100);
+  padding: var(--size-50) var(--size-100);
 }
 
-.checkbox-label {
-  display: flex;
-  gap: var(--size-100);
+.form-group:has(:not(:placeholder-shown):invalid) .form-input {
+  outline: thin solid var(--clr-invalid-border);
+  background-color: var(--clr-invalid-bg);
+  color: var(--clr-invalid);
 }
 
-.form-buttons {
-  display: flex;
-  justify-content: end;
+.form-group:has(:not(:placeholder-shown):valid) .form-input {
+  outline: thin solid var(--clr-valid-border);
+  background-color: var(--clr-valid-bg);
+  color: var(--clr-valid);
+}
+
+.grid {
+  --grid-cols: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, 1), 1fr);
   gap: var(--size-200);
-  border-top: thin solid var(--clr-secondary-900);
 }
+
+.grid > * {
+  text-align: justify;
+  border: thin solid var(--clr-primary-900);
+  padding: var(--size-200);
+}
+
+.grid:has(:nth-child(2):is(:last-child)) {
+  --grid-cols: 2;
+}
+
+.grid:has(:nth-child(5n):is(:last-child)) {
+  --grid-cols: 2;
+}
+
+.grid:has(:nth-child(5n):is(:last-child)) > :last-child {
+  grid-column: 1 / -1;
+}
+
+.grid:has(:nth-child(7n):is(:last-child)) {
+  --grid-cols: 3;
+}
+
+.grid:has(:nth-child(7n):is(:last-child)) > :last-child {
+  grid-column: 1 / -1;
+}
+
+.carousel {
+  display: grid;
+  gap: var(--size-400);
+}
+
+.carousel:not(:has(:nth-child(5))) {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.carousel:has(:nth-child(5)) {
+  background-color: var(--clr-primary-900);
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  overflow-x: scroll;
+  padding-block: var(--size-400);
+}
+
+.carousel > img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 /** Content - Layout - End **/
 
 /** Utility **/
@@ -371,8 +464,66 @@ a:where(:hover, :focus, :focus-visible) {
   color: var(--clr-secondary-900);
 }
 
-.clr-accent-400 {
-  color: var(--clr-accent-400);
+.clr-danger-50 {
+  color: var(--clr-danger-50);
+}
+.clr-danger-100 {
+  color: var(--clr-danger-100);
+}
+.clr-danger-200 {
+  color: var(--clr-danger-200);
+}
+.clr-danger-300 {
+  color: var(--clr-danger-300);
+}
+.clr-danger-400 {
+  color: var(--clr-danger-400);
+}
+.clr-danger-500 {
+  color: var(--clr-danger-500);
+}
+.clr-danger-600 {
+  color: var(--clr-danger-600);
+}
+.clr-danger-700 {
+  color: var(--clr-danger-700);
+}
+.clr-danger-800 {
+  color: var(--clr-danger-800);
+}
+.clr-danger-900 {
+  color: var(--clr-danger-900);
+}
+
+.clr-success-50 {
+  color: var(--clr-success-50);
+}
+.clr-success-100 {
+  color: var(--clr-success-100);
+}
+.clr-success-200 {
+  color: var(--clr-success-200);
+}
+.clr-success-300 {
+  color: var(--clr-success-300);
+}
+.clr-success-400 {
+  color: var(--clr-success-400);
+}
+.clr-success-500 {
+  color: var(--clr-success-500);
+}
+.clr-success-600 {
+  color: var(--clr-success-600);
+}
+.clr-success-700 {
+  color: var(--clr-success-700);
+}
+.clr-success-800 {
+  color: var(--clr-success-800);
+}
+.clr-success-900 {
+  color: var(--clr-success-900);
 }
 
 .clr-grey-100 {
@@ -469,8 +620,66 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-secondary-900);
 }
 
-.bg-accent-400 {
-  background-color: var(--clr-accent-400);
+.bg-danger-50 {
+  background-color: var(--clr-danger-50);
+}
+.bg-danger-100 {
+  background-color: var(--clr-danger-100);
+}
+.bg-danger-200 {
+  background-color: var(--clr-danger-200);
+}
+.bg-danger-300 {
+  background-color: var(--clr-danger-300);
+}
+.bg-danger-400 {
+  background-color: var(--clr-danger-400);
+}
+.bg-danger-500 {
+  background-color: var(--clr-danger-500);
+}
+.bg-danger-600 {
+  background-color: var(--clr-danger-600);
+}
+.bg-danger-700 {
+  background-color: var(--clr-danger-700);
+}
+.bg-danger-800 {
+  background-color: var(--clr-danger-800);
+}
+.bg-danger-900 {
+  background-color: var(--clr-danger-900);
+}
+
+.bg-success-50 {
+  background-color: var(--clr-success-50);
+}
+.bg-success-100 {
+  background-color: var(--clr-success-100);
+}
+.bg-success-200 {
+  background-color: var(--clr-success-200);
+}
+.bg-success-300 {
+  background-color: var(--clr-success-300);
+}
+.bg-success-400 {
+  background-color: var(--clr-success-400);
+}
+.bg-success-500 {
+  background-color: var(--clr-success-500);
+}
+.bg-success-600 {
+  background-color: var(--clr-success-600);
+}
+.bg-success-700 {
+  background-color: var(--clr-success-700);
+}
+.bg-success-800 {
+  background-color: var(--clr-success-800);
+}
+.bg-success-900 {
+  background-color: var(--clr-success-900);
 }
 
 .bg-grey-100 {

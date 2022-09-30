@@ -18,15 +18,192 @@
 
     <script type="module" src="./scripts/main.js"></script>
   </head>
-  <body>
+  <body id="top" class="clr-grey-500 bg-primary-50 pb-600">
     <main>
-      <div class="flow">
-        <h1>Exploring New Psuedo Clases</h1>
+      <h1 class="clr-primary-900 fs-800 mb-400">Exploring New Psuedo Clases</h1>
+      <nav class="mb-400">
+        <ul class="nav-list" role="list">
+          <li class="nav-list-item"><a href="#forms">Forms</a></li>
+          <li class="nav-list-item"><a href="#grids">Grids</a></li>
+          <li class="nav-list-item"><a href="#carousels">Carousels</a></li>
+        </ul>
+      </nav>
 
+      <p class="mb-400">
+        Classes like <code>:has()</code> and
+        <code>:placeholder-shown</code>.<br />
+        <a
+          href="https://github.com/davinaleong/proj-exploring-new-pseudo-classes"
+          target="_blank"
+          >Here</a
+        >
+        is the link to the repo.
+      </p>
+
+      <h2 id="forms" class="clr-primary-900 fs-700">Forms</h2>
+      <form action="" method="post" class="form | mb-400">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-input"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-input"
+            placeholder="johndoe@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <h2 id="grids" class="clr-primary-900 fs-700">Grid Columns</h2>
+      <h3 class="clr-primary-900 fs-600 mb-400">5 Cells</h3>
+
+      <div class="grid | mb-400">
         <p>
-          Classes like <code>:has()</code> and <code>:placeholder-shown</code>.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quam
+          delectus voluptates quod autem eaque deleniti fugit voluptatum velit
+          odio perferendis aliquid enim natus tempora dicta doloribus itaque
+          ipsum, modi quae? Impedit voluptas nobis quasi quaerat rerum suscipit
+          rem, doloribus voluptatum, nesciunt minus consequuntur quod minima
+          necessitatibus, officia in? Totam!
+        </p>
+        <p>
+          Incidunt sequi quos ab excepturi odit, dolorem labore quae tempora
+          laborum corporis repellat eligendi ipsa delectus explicabo doloremque
+          eius nihil atque, in accusantium corrupti adipisci fugit. Laboriosam,
+          ipsam magnam ipsa veniam deserunt soluta placeat tenetur molestias!
+          Nobis soluta, quasi qui atque molestiae vitae in quidem, voluptates
+          praesentium veritatis quod a.
+        </p>
+        <p>
+          Velit eum nostrum excepturi eos in laboriosam omnis qui expedita
+          consectetur adipisci corporis dolorem cumque praesentium sint,
+          consequuntur voluptas sit? Vel magnam praesentium ducimus eveniet fuga
+          esse ad aut totam quisquam asperiores aperiam deserunt quia doloremque
+          assumenda enim similique inventore, maiores sapiente voluptates
+          repudiandae, beatae, optio omnis culpa quod! Aliquam.
+        </p>
+        <p>
+          Voluptatem nam aspernatur ullam nulla minus unde, quo cum, rerum ex
+          iusto quod aperiam tempore modi accusamus. Corrupti illo sint
+          consectetur fugiat explicabo ullam maxime id iure velit dignissimos!
+          Tempore, voluptatem consequuntur iste, perferendis reprehenderit
+          aliquam nulla perspiciatis aspernatur asperiores voluptatum natus quia
+          nam vero autem, accusamus omnis dolor ut.
+        </p>
+        <p>
+          Quibusdam cumque, beatae id perferendis vel impedit quasi eaque qui
+          explicabo voluptates? Odio saepe unde animi atque rem deserunt nam,
+          facere sit? Dolor praesentium tenetur debitis cupiditate quis rerum
+          harum magni sunt. Error assumenda voluptas fuga vero, dolores neque
+          eaque? Atque reprehenderit aperiam laudantium vel culpa ab quisquam
+          inventore ducimus?
         </p>
       </div>
+
+      <h3 class="clr-primary-900 fs-600 mb-400">7 Cells</h3>
+      <div class="grid | mb-400">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quam
+          delectus voluptates quod autem eaque deleniti fugit voluptatum velit
+          odio perferendis aliquid enim natus tempora dicta doloribus itaque
+          ipsum, modi quae? Impedit voluptas nobis quasi quaerat rerum suscipit
+          rem, doloribus voluptatum, nesciunt minus consequuntur quod minima
+          necessitatibus, officia in? Totam!
+        </p>
+        <p>
+          Incidunt sequi quos ab excepturi odit, dolorem labore quae tempora
+          laborum corporis repellat eligendi ipsa delectus explicabo doloremque
+          eius nihil atque, in accusantium corrupti adipisci fugit. Laboriosam,
+          ipsam magnam ipsa veniam deserunt soluta placeat tenetur molestias!
+          Nobis soluta, quasi qui atque molestiae vitae in quidem, voluptates
+          praesentium veritatis quod a.
+        </p>
+        <p>
+          Velit eum nostrum excepturi eos in laboriosam omnis qui expedita
+          consectetur adipisci corporis dolorem cumque praesentium sint,
+          consequuntur voluptas sit? Vel magnam praesentium ducimus eveniet fuga
+          esse ad aut totam quisquam asperiores aperiam deserunt quia doloremque
+          assumenda enim similique inventore, maiores sapiente voluptates
+          repudiandae, beatae, optio omnis culpa quod! Aliquam.
+        </p>
+        <p>
+          Voluptatem nam aspernatur ullam nulla minus unde, quo cum, rerum ex
+          iusto quod aperiam tempore modi accusamus. Corrupti illo sint
+          consectetur fugiat explicabo ullam maxime id iure velit dignissimos!
+          Tempore, voluptatem consequuntur iste, perferendis reprehenderit
+          aliquam nulla perspiciatis aspernatur asperiores voluptatum natus quia
+          nam vero autem, accusamus omnis dolor ut.
+        </p>
+        <p>
+          Quibusdam cumque, beatae id perferendis vel impedit quasi eaque qui
+          explicabo voluptates? Odio saepe unde animi atque rem deserunt nam,
+          facere sit? Dolor praesentium tenetur debitis cupiditate quis rerum
+          harum magni sunt. Error assumenda voluptas fuga vero, dolores neque
+          eaque? Atque reprehenderit aperiam laudantium vel culpa ab quisquam
+          inventore ducimus?
+        </p>
+        <p>
+          Voluptatem nam aspernatur ullam nulla minus unde, quo cum, rerum ex
+          iusto quod aperiam tempore modi accusamus. Corrupti illo sint
+          consectetur fugiat explicabo ullam maxime id iure velit dignissimos!
+          Tempore, voluptatem consequuntur iste, perferendis reprehenderit
+          aliquam nulla perspiciatis aspernatur asperiores voluptatum natus quia
+          nam vero autem, accusamus omnis dolor ut.
+        </p>
+        <p>
+          Quibusdam cumque, beatae id perferendis vel impedit quasi eaque qui
+          explicabo voluptates? Odio saepe unde animi atque rem deserunt nam,
+          facere sit? Dolor praesentium tenetur debitis cupiditate quis rerum
+          harum magni sunt. Error assumenda voluptas fuga vero, dolores neque
+          eaque? Atque reprehenderit aperiam laudantium vel culpa ab quisquam
+          inventore ducimus?
+        </p>
+      </div>
+
+      <hr class="mb-400" />
+
+      <h2 id="carousels" class="clr-primary-900 fs-700 mb-400">Carousel</h2>
+      <div class="carousel | mb-400">
+        <img src="./images/carousel-1.jpg" alt="Slide 1" />
+        <img src="./images/carousel-2.jpg" alt="Slide 2" />
+        <img src="./images/carousel-3.jpg" alt="Slide 3" />
+      </div>
+
+      <div class="carousel | mb-400">
+        <img src="./images/carousel-1.jpg" alt="Slide 1" />
+        <img src="./images/carousel-2.jpg" alt="Slide 2" />
+        <img src="./images/carousel-3.jpg" alt="Slide 3" />
+        <img src="./images/carousel-4.jpg" alt="Slide 4" />
+        <img src="./images/carousel-5.jpg" alt="Slide 5" />
+        <img src="./images/carousel-6.jpg" alt="Slide 6" />
+        <img src="./images/carousel-7.jpg" alt="Slide 7" />
+        <img src="./images/carousel-8.jpg" alt="Slide 8" />
+        <img src="./images/carousel-9.jpg" alt="Slide 9" />
+        <img src="./images/carousel-10.jpg" alt="Slide 10" />
+      </div>
+
+      <p>
+        <a href="#top">Back to Top</a>
+      </p>
     </main>
   </body>
 </html>
