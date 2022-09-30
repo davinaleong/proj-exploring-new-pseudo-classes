@@ -131,7 +131,6 @@ body {
   font-family: var(--ff-body);
   font-weight: var(--fw-regular);
   min-height: 100vh;
-  padding: var(--size-400);
 }
 
 :focus {
@@ -201,11 +200,12 @@ code,
 }
 
 a {
-  --clr-link: var(--clr-secondary-900);
-  --clr-hover-link: var(--clr-secondary-700);
+  --clr-link: var(--clr-secondary-800);
+  --clr-hover-link: var(--clr-secondary-500);
 
   font-weight: var(--fw-bold);
   color: var(--clr-link);
+  transition: all 0.3s ease-in-out;
 }
 
 a:where(:hover, :focus, :focus-visible) {
@@ -252,6 +252,16 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-clr: var(--clr-grey-50);
   --btn-hover-bg-clr: var(--clr-primary-400);
   --btn-hover-border-clr: var(--clr-primary-400);
+}
+
+.btn-secondary {
+  --btn-clr: var(--clr-grey-50);
+  --btn-bg-clr: var(--clr-secondary-800);
+  --btn-border-clr: var(--clr-secondary-800);
+
+  --btn-hover-clr: var(--clr-grey-50);
+  --btn-hover-bg-clr: var(--clr-secondary-500);
+  --btn-hover-border-clr: var(--clr-secondary-500);
 }
 
 hr {
